@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pygirls import views
+from pygirls import views as pygirls_views
+from swahilipot import views as swahilipot_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pygirls/',views.pygirls, name='pygirls'),
+    path('pygirls/',pygirls_views.pygirls, name='pygirls'),
+    path('swahilipot/',swahilipot_views.swahilipot, name='swahilipot'),
 ]
 
