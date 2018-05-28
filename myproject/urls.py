@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pygirls/',pygirls_views.pygirls, name='pygirls'),
     path('swahilipot/',swahilipot_views.swahilipot, name='swahilipot'),
+    path('boards/',swahilipot_views.home, name='home'),
 ]
 
