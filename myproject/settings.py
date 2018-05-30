@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pygirls',
     'polls',
     'swahilipot',
+    'members',
 ]
 
 MIDDLEWARE = [

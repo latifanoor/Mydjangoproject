@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>MEMBERS</h1>
+<p>Every Django model comes with a special attribute; we call it a Model Manager. You can access it via the Python attribute objects. <br>It is used mainly to execute queries in the database. For example, we could use it to directly create a new Board object.</p>
+
+ <h1>Members</h1>
+
+    {% for members in members_names %}
+      {{ members.full_name }} <br>
+      {{members.email}}<br>
+      {{members.national_id}}<br>
+      {{members.phone_number}}<br>
+      {{members.location}}<br>
+      {{members.biography}}<br>
+
+    {% endfor %}
+
+  <meta charset="utf-8">
+    <title style="color:blue">MEMBERS</title>
+  </head>
+    <h1>Member</h1>
+
+    <table member="1">
+      <thead>
+        <tr>
+          <th>full_name</th>
+          <th>email</th>
+          <th>national_id</th>
+          <th>location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for member in members %}
+        <tr>
+            <td>
+              {{ member.full_name }}<br>
+              <small style="color: #888">{{ member.location }}</small>
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>  
+</body>
+</html> 

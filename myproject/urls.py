@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from pygirls import views as pygirls_views
 from swahilipot import views as swahilipot_views
+from members import views as members_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pygirls/',pygirls_views.pygirls, name='pygirls'),
     path('swahilipot/',swahilipot_views.swahilipot, name='swahilipot'),
     path('boards/',swahilipot_views.home, name='home'),
+    path('members/',members_views.members,name='members'),
 ]
 
